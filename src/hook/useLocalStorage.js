@@ -9,6 +9,7 @@ export default function useLocalStorageNumber(key, initialValue) {
             setValue(Number(valueStr));
         }
     }, [key]);
+
     useEffect(() => {
         const prev = window.localStorage.getItem(key);
         const next = String(value);
@@ -17,5 +18,5 @@ export default function useLocalStorageNumber(key, initialValue) {
         }
     }, [key, value]);
 
-    return value;
+    return [value, setValue];
 } 
