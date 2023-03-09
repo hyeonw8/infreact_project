@@ -1,5 +1,6 @@
 import React from 'react';
+import Search from './container/Search';
 
 export default function App() {
-  return <div>찾아야한다</div>;
+  return <Search />;
 }
